@@ -6,7 +6,7 @@
 #    By: sylducam <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/25 11:33:57 by sylducam          #+#    #+#              #
-#    Updated: 2021/02/26 16:57:58 by sylducam         ###   ########lyon.fr    #
+#    Updated: 2021/02/27 17:20:07 by sylducam         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,4 +18,5 @@ COPY srcs/ .
 
 EXPOSE 80 443
 
-ENTRYPOINT ["bash", "script.sh"]
+#CMD ["bash", "start.sh"]
+ENTRYPOINT ["bash", "start.sh"]

@@ -1,6 +1,11 @@
 #!/bin/bash
 
-mkdir var/www/localhost
+#NGINX
+mkdir -p var/www/localhost/html
+sudo chown -R $USER:$USER /var/www/localhost
+sudo chmod -R 755 /var/www/localhost
+mv default etc/nginx/sites-available
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
 #SERVICE LAUNCH
 service php7.3-fpm start
