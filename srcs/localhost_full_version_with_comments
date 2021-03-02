@@ -43,16 +43,17 @@ server {
 
         server_name localhost www.localhost;
 
-        location / {
+        location /
+		{
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 try_files $uri $uri/ =404;
-				autoindex on;
         }
 
         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
         #
-        location ~ \.php$ {
+        location ~ \.php$
+		{
                include snippets/fastcgi-php.conf;
         #
         #       # With php7.0-cgi alone:
@@ -67,6 +68,7 @@ server {
         #location ~ /\.ht {
         #       deny all;
         #}
+		return 302 https://$server_name$request_uri;
 }
 
 
