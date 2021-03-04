@@ -15,8 +15,8 @@ service nginx start
 
 #SSL CERTIFICATE
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=FR/ST=AURA/L=Lyon/O=42/OU=sylducam/CN=localhost/emailAddress=sylducam@student.42-lyon.fr"
-# essayes de ne pas mettre cette ligne et de virer sa correspondance dans ssl-params.conf
-sudo openssl dhparam -out /etc/nginx/dhparam.pem 2048
+#essayes de ne pas mettre cette ligne et de virer sa correspondance dans ssl-params.conf
+#sudo openssl dhparam -out /etc/nginx/dhparam.pem 2048
 sudo mv self-signed.conf /etc/nginx/snippets
 sudo mv ssl-params.conf /etc/nginx/snippets
 sudo cp default /etc/nginx/sites-available/default
@@ -35,20 +35,19 @@ sudo cp default /etc/nginx/sites-available/default
 #MYSQL
 service mysql start
 sudo mysql_secure_installation
-mysql --auto-rehash
 mysql -u root  < mysql.sql # ca ne marche pas
 
 #WORDPRESS
-#wget https://wordpress.org/latest.tar.gz
-#tar xf latest.tar.gz
+wget https://wordpress.org/latest.tar.gz
+tar xf latest.tar.gz
 mv wordpress /var/www/html
 
 #PHPMYADMIN
-#wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
-#tar xf phpMyAdmin-latest-all-languages.tar.gz
-#rm phpMyAdmin-latest-all-languages.tar.gz
-sudo mv phpMyAdmin /var/www/html
+wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
+tar xf phpMyAdmin-latest-all-languages.tar.gz
+rm phpMyAdmin-latest-all-languages.tar.gz
+mv phpMyAdmin* /var/www/html
 
 #DISPLAY LOGS
 service nginx restart
-#tail -f /var/log/nginx/access.log /var/log/nginx/error.log
+tail -f /var/log/nginx/access.log /var/log/nginx/error.log
