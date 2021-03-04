@@ -24,7 +24,7 @@ mv wordpress /var/www/html
 wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
 tar xf phpMyAdmin-latest-all-languages.tar.gz
 rm phpMyAdmin-latest-all-languages.tar.gz
-mv phpMyAdmin* /var/www/html
+mv phpMyAdmin* /var/www/html/phpmyadmin
 
 #DISPLAY LOGS
 service nginx restart
