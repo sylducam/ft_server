@@ -5,7 +5,11 @@ Project meant to discover and use Docker by setting a unique container running w
 # Commands to run the project
 
 docker build -t ft_server .
+
+with autoindex :
 docker run -p 80:80 -p 443:443 -it --rm --name ft_server_ct ft_server
+without autoindex :
+docker run -p 80:80 -p 443:443 -e AUTOINDEX=OFF --rm --name ft_server_ct ft_server
 
 to keep it running and open a terminal in Debian :
 

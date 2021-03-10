@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#AUTOINDEX SWITCH
+if [ "$AUTOINDEX" = "OFF" ]
+	then
+		sed -i 's/autoindex on;/autoindex off;/g' default
+fi
+
 #SERVICE LAUNCH
 service php7.3-fpm start
 service nginx start
@@ -43,6 +49,7 @@ mysql -u root  < mysql.sql
 wget https://wordpress.org/latest.tar.gz
 tar xf latest.tar.gz
 mv wordpress /var/www/html
+mv wp-config.php /var/www/html/wordpress
 
 #PHPMYADMIN
 wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
