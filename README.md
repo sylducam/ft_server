@@ -6,6 +6,7 @@ www.42lyon.fr school project meant to discover and use Docker by setting a uniqu
 
 1) Start Docker Desktop
 2) type the following line in your terminal :
+
 ```docker build -t ft_server .```
 
 The program is launchable with or without autoindex feature
