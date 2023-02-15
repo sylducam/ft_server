@@ -2,14 +2,14 @@
 
 www.42lyon.fr school project meant to discover and use Docker by setting a unique container including four applications working together : Nginx, Wordpress, PhpMyAdmin and MySQL.
 
-# Commands to run the project
+ ## Commands to run the project
 
 1) Start Docker Desktop
-2) type the following line in your terminal :
+2) Type the following line in your terminal :
 
    ```docker build -t ft_server .```
 
-The program is launchable with or without autoindex feature.
+The program is launchable with or without autoindex feature
 
 autoindex on :
 
