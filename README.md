@@ -9,7 +9,8 @@ www.42lyon.fr school project meant to discover and use Docker by setting a uniqu
 
    ```docker build -t ft_server .```
 
-The program is launchable with or without autoindex feature
+The program is launchable with or without autoindex feature.
+
 autoindex on :
 
 
