@@ -17,8 +17,7 @@ autoindex on :
 ```docker run -p 80:80 -p 443:443 -it --rm --name ft_server_ct ft_server```
 
 autoindex off :
-
-   ```docker run -p 80:80 -p 443:443 -e AUTOINDEX=OFF --rm --name ft_server_ct ft_server```
+```docker run -p 80:80 -p 443:443 -e AUTOINDEX=OFF --rm --name ft_server_ct ft_server```
 
 To keep the container running and get a terminal opened in this container's OS :
 
