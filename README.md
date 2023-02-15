@@ -1,6 +1,6 @@
 # ft_server
 
-www.42lyon.fr school project meant to discover and use Docker by setting a unique container including four applictions working together : Nginx, Wordpress, PhpMyAdmin and MySQL.
+www.42lyon.fr school project meant to discover and use Docker by setting a unique container including four applications working together : Nginx, Wordpress, PhpMyAdmin and MySQL.
 
 # Commands to run the project
 
